@@ -27,14 +27,14 @@ import { EffectHandle, EffectScope, ObixRuntimeError, batch } from 'obix-runtime
 
 ## Architecture role
 
-`obix-runtime-reactivity` is part of the **experimental native browser runtime** (Phase 6): it runs canonical DOP IR with no Vue. Applications that choose the native runtime install `obix-runtime-browser`; the other runtime packages are its lower layers.
+`obix-runtime-reactivity` is a **public building block**: the umbrella `obix` depends on it and re-exports its stable API, so applications normally reach it through `obix`; it can also be installed on its own.
 
 The architecture of OBIX — the package families and which packages are public API — is indexed in the umbrella: [docs/architecture.md](https://github.com/obinexus/obix/blob/main/docs/architecture.md).
 
 ## Package relationships
 
 - Depends on (OBIX): no other OBIX package.
-- Used by (OBIX): [`obix-runtime-browser`](https://github.com/obinexus/obix-runtime-browser), [`obix-runtime-component`](https://github.com/obinexus/obix-runtime-component), [`obix-runtime-dom`](https://github.com/obinexus/obix-runtime-dom).
+- Used by (OBIX): [`obix`](https://github.com/obinexus/obix), [`obix-runtime-browser`](https://github.com/obinexus/obix-runtime-browser), [`obix-runtime-component`](https://github.com/obinexus/obix-runtime-component), [`obix-runtime-dom`](https://github.com/obinexus/obix-runtime-dom).
 
 ## Testing
 
